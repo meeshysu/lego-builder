@@ -2,4 +2,9 @@
 import 'bootstrap';
 import './index.scss';
 
-console.log('whassup');
+// const createPartsCards = (parts) => {
+//   let newLegoMan = '';
+//   parts.forEach((part) => {
+
+//   })
+// }
