@@ -1,5 +1,10 @@
 // import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
+import getHeads from './components/LegoCharacter/legoCharacter';
 
-console.log('whassup');
+const initlializeApp = () => {
+  getHeads.initializeHeads();
+};
+
+initlializeApp();
