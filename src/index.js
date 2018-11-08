@@ -1,10 +1,10 @@
 // import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
+import getHeads from './components/LegoCharacter/legoCharacter';
 
-// const createPartsCards = (parts) => {
-//   let newLegoMan = '';
-//   parts.forEach((part) => {
+const initlializeApp = () => {
+  getHeads.initializeHeads();
+};
 
-//   })
-// }
+initlializeApp();
