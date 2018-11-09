@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'bootstrap';
 
-import getAllHeadsFromDb from '../../data/partsData';
+import legoParts from '../../data/partsData';
 
 const createPartsCard = (part, divId) => {
   let domString = '';
@@ -12,9 +12,8 @@ const createPartsCard = (part, divId) => {
 };
 
 const initializeHeads = () => {
-  getAllHeadsFromDb()
+  legoParts.getAllHeadsFromDb()
     .then((data) => {
-      console.log(data);
       createPartsCard(data, '#headContainer');
     })
     .catch((error) => {
@@ -22,4 +21,24 @@ const initializeHeads = () => {
     });
 };
 
-export default { initializeHeads };
+const initializeTorsos = () => {
+  legoParts.getAllTorsosFromDb()
+    .then((data) => {
+      createPartsCard(data, '#torsoContainer');
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+const initializeLegs = () => {
+  legoParts.getAllLegsFromDb()
+    .then((data) => {
+      createPartsCard(data, '#legsContainer');
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+export default { initializeHeads, initializeTorsos, initializeLegs };
