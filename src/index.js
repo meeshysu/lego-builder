@@ -1,12 +1,13 @@
 // import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
-import getHeads from './components/LegoCharacter/legoCharacter';
+import getParts from './components/LegoCharacter/legoCharacter';
 
 const initlializeApp = () => {
-  getHeads.initializeHeads();
-  getHeads.initializeTorsos();
-  getHeads.initializeLegs();
+  getParts.initializeHeads();
+  getParts.initializeTorsos();
+  getParts.initializeLegs();
+  getParts.headDropDown();
 };
 
 initlializeApp();

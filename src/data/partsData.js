@@ -11,6 +11,7 @@ const getAllHeadsFromDb = () => new Promise((resolve, reject) => {
     });
 });
 
+
 const getAllTorsosFromDb = () => new Promise((resolve, reject) => {
   axios.get('http://localhost:3004/torsos')
     .then((data) => {
@@ -33,4 +34,7 @@ const getAllLegsFromDb = () => new Promise((resolve, reject) => {
     });
 });
 
-export default { getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb };
+
+export default {
+  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb,
+};

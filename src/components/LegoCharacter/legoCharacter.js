@@ -5,8 +5,8 @@ import legoParts from '../../data/partsData';
 
 const createPartsCard = (part, divId) => {
   let domString = '';
-  domString += `<div>
-                    <img src='${part.imageUrl}'/>
+  domString += `<div id="card">
+                    <img id="cardImg" src='${part.imageUrl}'/>
                 </div>`;
   $(divId).html(domString);
 };
@@ -41,4 +41,18 @@ const initializeLegs = () => {
     });
 };
 
-export default { initializeHeads, initializeTorsos, initializeLegs };
+
+const headDropDown = () => {
+  $(':class').select = () => $('#dropdownHead').show();
+};
+
+const clickFunction = (divId) => {
+  $(divId).on('click', 'part', (e) => {
+    const partIClicked = $(e.target).closest('.part').attr('id');
+    headDropDown(partIClicked);
+  });
+};
+
+export default {
+  initializeHeads, initializeTorsos, initializeLegs, headDropDown, clickFunction,
+};
