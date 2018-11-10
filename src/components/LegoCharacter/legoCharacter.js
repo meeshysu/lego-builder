@@ -43,28 +43,27 @@ const initializeLegs = () => {
     });
 };
 
-
-export default {
-  initializeHeads, initializeTorsos, initializeLegs,
+const initializeChooseHead = () => {
+  legoParts.selectLegoHead()
+    .then((data) => {
+      createPartsCard(data);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 };
 
-// const initializeChooseHead = () => {
-//   legoParts.selectLegoHead()
-//     .then((data) => {
-//       createPartsCard(data);
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
-// };
+export default {
+  initializeHeads, initializeTorsos, initializeLegs, initializeChooseHead,
+};
 
 
 // const chooseLegoHead = (legoHead) => {
 //   let selectedHead = [];
-//   const head = data.show(heads.head.imageUrl)
+//   const head = data.show()
 //   switch (legoHead) {
 //     case 'Ast':
-//       $(this).attr('heads.heads1.imageUrl');
+//       $(this).attr();
 //       break;
 //     default:
 //       selectedHead = [];

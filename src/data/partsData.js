@@ -46,19 +46,25 @@ const selectLegoHead = legoHead => new Promise((resolve, reject) => {
     });
 });
 
-const chooseLegoHead = () => new Promise((resolve, reject) => {
-  axios.get('http://localhost:3004/heads')
-    .then((data) => {
-      if (selectLegoHead) {
-        $('#headContainer').append('<img src=" + selectLegoHead + ">');
-        resolve(data);
-      }
-    })
-    .catch((error) => {
-      reject(error);
-    });
+$('#dropdownHead a').click(() => {
+  const selectValue = $(this).val();
+  selectLegoHead(selectValue);
 });
 
+
 export default {
-  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead, chooseLegoHead,
+  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead,
 };
+
+// const chooseLegoHead = () => new Promise((resolve, reject) => {
+//   axios.get('http://localhost:3004/heads')
+//     .then((data) => {
+//       if (selectLegoHead) {
+//         $('#headContainer').append('<img src=" + selectLegoHead + ">');
+//         resolve(data);
+//       }
+//     })
+//     .catch((error) => {
+//       reject(error);
+//     });
+// });
