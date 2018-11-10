@@ -7,7 +7,7 @@ const initlializeApp = () => {
   getParts.initializeHeads();
   getParts.initializeTorsos();
   getParts.initializeLegs();
-  getParts.headDropDown();
+  // getParts.initializeChooseHead();
 };
 
 initlializeApp();

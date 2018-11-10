@@ -34,7 +34,31 @@ const getAllLegsFromDb = () => new Promise((resolve, reject) => {
     });
 });
 
+const selectLegoHead = legoHead => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3004/heads')
+    .then((data) => {
+      const headChosen = data.data;
+      const filteredHead = headChosen.filter(x => x.id === legoHead);
+      resolve(filteredHead);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+const chooseLegoHead = () => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3004/heads')
+    .then((data) => {
+      if (selectLegoHead) {
+        $('#headContainer').append('<img src=" + selectLegoHead + ">');
+        resolve(data);
+      }
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
 
 export default {
-  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb,
+  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead, chooseLegoHead,
 };
