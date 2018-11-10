@@ -46,14 +46,15 @@ const selectLegoHead = legoHead => new Promise((resolve, reject) => {
     });
 });
 
-$('#dropdownHead a').click(() => {
-  const selectValue = $(this).val();
-  selectLegoHead(selectValue);
-});
-
+const dropdownHead = () => {
+  $('#dropdownHead a').click(() => {
+    const selectValue = $(this).val();
+    console.log(selectValue);
+  });
+};
 
 export default {
-  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead,
+  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead, dropdownHead,
 };
 
 // const chooseLegoHead = () => new Promise((resolve, reject) => {

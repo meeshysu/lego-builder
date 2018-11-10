@@ -46,7 +46,7 @@ const initializeLegs = () => {
 const initializeChooseHead = () => {
   legoParts.selectLegoHead()
     .then((data) => {
-      createPartsCard(data);
+      console.log(data);
     })
     .catch((error) => {
       console.error(error);
@@ -56,17 +56,3 @@ const initializeChooseHead = () => {
 export default {
   initializeHeads, initializeTorsos, initializeLegs, initializeChooseHead,
 };
-
-
-// const chooseLegoHead = (legoHead) => {
-//   let selectedHead = [];
-//   const head = data.show()
-//   switch (legoHead) {
-//     case 'Ast':
-//       $(this).attr();
-//       break;
-//     default:
-//       selectedHead = [];
-//   }
-//   return selectedHead;
-// };

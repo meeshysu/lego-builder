@@ -7,7 +7,7 @@ const initlializeApp = () => {
   getParts.initializeHeads();
   getParts.initializeTorsos();
   getParts.initializeLegs();
-  // getParts.initializeChooseHead();
+  getParts.initializeChooseHead();
 };
 
 initlializeApp();
