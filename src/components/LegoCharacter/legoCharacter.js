@@ -21,7 +21,7 @@ const chosenHead = (selectValueHead) => {
     .then((data) => {
       console.log(data[0]);
       $('#headContainer').hide();
-      createPartsCard(data[0], '#newHeadContainer');
+      createPartsCard(data[0], '#newHeadContainer', '#head');
     })
     .catch((error) => {
       console.error(error);
@@ -38,7 +38,7 @@ const dropdownHead = () => {
 const initializeHeads = () => {
   legoParts.getAllHeadsFromDb()
     .then((data) => {
-      createPartsCard(data, '#headContainer', '#head');
+      createPartsCard(data, '#headContainer');
       dropdownHead();
     })
     .catch((error) => {
@@ -61,7 +61,7 @@ const chosenTorso = (selectValueTorso) => {
     .then((data) => {
       console.log(data[0]);
       $('#torsoContainer').hide();
-      createPartsCard(data[0], '#newTorsoContainer');
+      createPartsCard(data[0], '#newTorsoContainer', '#torso');
     })
     .catch((error) => {
       console.error(error);
@@ -101,7 +101,7 @@ const chosenLegs = (selectValueLegs) => {
     .then((data) => {
       console.log(data[0]);
       $('#legsContainer').hide();
-      createPartsCard(data[0], '#newLegsContainer');
+      createPartsCard(data[0], '#newLegsContainer', '#legs');
     })
     .catch((error) => {
       console.error(error);

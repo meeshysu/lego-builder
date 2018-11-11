@@ -3,3 +3,10 @@
 body {
   background-color: lightgreen;
 }
+
+#names {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 6%;
+}
