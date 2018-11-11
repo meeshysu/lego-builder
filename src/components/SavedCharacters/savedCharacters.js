@@ -5,9 +5,9 @@ const savedCharacterString = (character) => {
   let newString = '';
   newString += `<div class="newcard">
   <h5 class="legoName">${character.name}</h5>
-    <img src="${character.headImg}" alt="head">
-    <img src="${character.torsoImg}" alt="torso">
-    <img src="${character.legsImg}" alt="legs">
+    <img src="${character.headImage}" alt="head">
+    <img src="${character.torsoImage}" alt="torso">
+    <img src="${character.legsImage}" alt="legs">
   </div>
   </div>`;
   $('#savedLegoCreation').append(newString);
@@ -15,9 +15,9 @@ const savedCharacterString = (character) => {
 
 const emptyObjectSlot = {
   name: '',
-  headImg: '',
-  torsoImg: '',
-  legsImg: '',
+  headImage: '',
+  torsoImage: '',
+  legsImage: '',
 };
 
 const retrieveData = () => {
@@ -25,13 +25,13 @@ const retrieveData = () => {
   const torsoName = $('#torso').html();
   const legsName = $('#legs').html();
   const newSavedName = `${headName}${torsoName}${legsName}`;
-  const headImg = $('.head').attr('src');
-  const torsoImg = $('.torso').attr('src');
-  const legsImg = $('.legs').attr('src');
+  const headImage = $('.head').attr('src');
+  const torsoImage = $('.torso').attr('src');
+  const legsImage = $('.legs').attr('src');
   emptyObjectSlot.name = newSavedName;
-  emptyObjectSlot.headImg = headImg;
-  emptyObjectSlot.torsoImg = torsoImg;
-  emptyObjectSlot.legsImg = legsImg;
+  emptyObjectSlot.headImage = headImage;
+  emptyObjectSlot.torsoImage = torsoImage;
+  emptyObjectSlot.legsImage = legsImage;
 };
 
 const bindEvents = () => {

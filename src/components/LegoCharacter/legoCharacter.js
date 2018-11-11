@@ -6,10 +6,10 @@ import './legoCharacter.scss';
 import legoParts from '../../data/partsData';
 
 
-const createPartsCard = (part, divId, nameDiv) => {
+const createPartsCard = (part, divId, nameDiv, imageClass) => {
   let domString = '';
   domString += `<div id="card">
-                    <img id="cardImg" src='${part.imageUrl}'/>
+                    <img id="cardImg" class="${imageClass}" src="${part.imageUrl}"/>
                 </div>`;
   $(divId).html(domString);
   $(nameDiv).html(`${part.name}`);
