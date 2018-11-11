@@ -34,11 +34,11 @@ const getAllLegsFromDb = () => new Promise((resolve, reject) => {
     });
 });
 
-const selectLegoHead = legoHead => new Promise((resolve, reject) => {
+const selectLegoHead = selectValueHead => new Promise((resolve, reject) => {
   axios.get('http://localhost:3004/heads')
     .then((data) => {
       const headChosen = data.data;
-      const filteredHead = headChosen.filter(x => x.id === legoHead);
+      const filteredHead = headChosen.filter(x => x.id === selectValueHead);
       resolve(filteredHead);
     })
     .catch((error) => {
@@ -46,26 +46,35 @@ const selectLegoHead = legoHead => new Promise((resolve, reject) => {
     });
 });
 
-const dropdownHead = () => {
-  $('#dropdownHead a').click(() => {
-    const selectValue = $(this).val();
-    console.log(selectValue);
-  });
-};
+const selectLegoTorso = selectValueTorso => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3004/torsos')
+    .then((data) => {
+      const torsoChosen = data.data;
+      const filteredTorso = torsoChosen.filter(x => x.id === selectValueTorso);
+      resolve(filteredTorso);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+const selectLegoLegs = selectValueLegs => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3004/legs')
+    .then((data) => {
+      const legsChosen = data.data;
+      const filteredLegs = legsChosen.filter(x => x.id === selectValueLegs);
+      resolve(filteredLegs);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
 
 export default {
-  getAllHeadsFromDb, getAllTorsosFromDb, getAllLegsFromDb, selectLegoHead, dropdownHead,
+  getAllHeadsFromDb,
+  getAllTorsosFromDb,
+  getAllLegsFromDb,
+  selectLegoHead,
+  selectLegoTorso,
+  selectLegoLegs,
 };
-
-// const chooseLegoHead = () => new Promise((resolve, reject) => {
-//   axios.get('http://localhost:3004/heads')
-//     .then((data) => {
-//       if (selectLegoHead) {
-//         $('#headContainer').append('<img src=" + selectLegoHead + ">');
-//         resolve(data);
-//       }
-//     })
-//     .catch((error) => {
-//       reject(error);
-//     });
-// });

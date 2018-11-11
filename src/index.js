@@ -8,6 +8,8 @@ const initlializeApp = () => {
   getParts.initializeTorsos();
   getParts.initializeLegs();
   getParts.initializeChooseHead();
+  getParts.initializeChooseTorso();
+  getParts.initializeChooseLegs();
 };
 
 initlializeApp();
