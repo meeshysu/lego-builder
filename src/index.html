@@ -1,73 +1,92 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lego Builder</title>
 </head>
-<body>
+
+<div>
   <div id="heading">Build Your Lego Man!</div>
 
-<div id="legoContainer" class="legoCreation">
-
-  <div id="headContainer" class="theHead"></div>
-
-  <div id="headButton" class="btn-group">
-      <button type="button" class="btn btn-danger">Choose A Head</button>
-      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div id="dropdownHead" class="dropdown-menu">
-        <a class="dropdown-item" href="#">ast</a>
-        <a class="dropdown-item" href="#">min</a>
-        <a class="dropdown-item" href="#">storm</a>
-        <a class="dropdown-item" href="#">pi</a>
-        <a class="dropdown-item" href="#">ge</a>
-        <a class="dropdown-item" href="#">imp</a>
-        <a class="dropdown-item" href="#">pat</a>
-        <a class="dropdown-item" href="#">wonder</a>
-    </div>
+  <div id="names">
+    <div id="head"></div>
+    <div id="torso"></div>
+    <div id="legs"></div>
   </div>
-
   
+  <div id="savedLegoCreation"></div>
 
-  <div id="torsoContainer" class="theTorso"></div>
-  <div id="torsoButton" class="btn-group">
-      <button type="button" class="btn btn-danger">Choose A Torso</button>
-      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">ron</a>
-        <a class="dropdown-item" href="#">ot</a>
-        <a class="dropdown-item" href="#">troo</a>
-        <a class="dropdown-item" href="#">rat</a>
-        <a class="dropdown-item" href="#">ni</a>
-        <a class="dropdown-item" href="#">erial</a>
-        <a class="dropdown-item" href="#">ri</a>
-        <a class="dropdown-item" href="#">wo</a>
+  <button type="button" class="btn btn-light" id="savedLego">Save Your Creation!</button>
+
+  <div id="legoContainer" class="legoCreation">
+
+    <div id="headContainer" class="theHead"></div>
+    <div id="newHeadContainer"></div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+      </div>
+      <select class="custom-select" id="dropdownHeads">
+        <option selected>Select A Head:</option>
+        <option value="head1">ast</option>
+        <option value="head2">min</option>
+        <option value="head3">storm</option>
+        <option value="head4">pi</option>
+        <option value="head5">ge</option>
+        <option value="head6">imp</option>
+        <option value="head7">pat</option>
+        <option value="head8">wonder</option>
+      </select>
+      <button id="buttonId">Submit</button>
     </div>
   </div>
 
-  <div id="legsContainer" class="theLegs"></div>
-  <div id="legsButton" class="btn-group">
-      <button type="button" class="btn btn-danger">Choose Some Legs</button>
-      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">aut</a>
-        <a class="dropdown-item" href="#">aur</a>
-        <a class="dropdown-item" href="#">per</a>
-        <a class="dropdown-item" href="#">e</a>
-        <a class="dropdown-item" href="#">e</a>
-        <a class="dropdown-item" href="#">guard</a>
-        <a class="dropdown-item" href="#">ck</a>
-        <a class="dropdown-item" href="#">man</a>
+    <div id="torsoContainer" class="theTorso"></div>
+    <div id="newTorsoContainer"></div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+      </div>
+      <select class="custom-select" id="dropdownTorsos">
+        <option selected>Select A Torso:</option>
+        <option value="torso1">ron</option>
+        <option value="torso2">ot</option>
+        <option value="torso3">troo</option>
+        <option value="torso4">rat</option>
+        <option value="torso5">ni</option>
+        <option value="torso6">erial</option>
+        <option value="torso7">ri</option>
+        <option value="torso8">wo</option>
+      </select>
+      <button id="buttonId2">Submit</button>
+    </div>
+  </div>
+
+    <div id="legsContainer" class="theLegs"></div>
+    <div id="newLegsContainer"></div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+      </div>
+      <select class="custom-select" id="dropdownLegs">
+        <option selected>Select Legs:</option>
+        <option value="leg1">aut</option>
+        <option value="leg2">aur</option>
+        <option value="leg3">per</option>
+        <option value="leg4">e</option>
+        <option value="leg5">e</option>
+        <option value="leg6">guard</option>
+        <option value="leg7">ck</option>
+        <option value="leg8">man</option>
+      </select>
+      <button id="buttonId3">Submit</button>
     </div>
   </div>
 
 </div>
 
 </body>
+
 </html>
