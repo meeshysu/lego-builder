@@ -6,10 +6,10 @@ import './legoCharacter.scss';
 import legoParts from '../../data/partsData';
 
 
-const createPartsCard = (part, divId, nameDiv) => {
+const createPartsCard = (part, divId, nameDiv, imageClass) => {
   let domString = '';
   domString += `<div id="card">
-                    <img id="cardImg" src='${part.imageUrl}'/>
+                    <img id="cardImg" class="${imageClass}" src="${part.imageUrl}"/>
                 </div>`;
   $(divId).html(domString);
   $(nameDiv).html(`${part.name}`);
@@ -21,7 +21,7 @@ const chosenHead = (selectValueHead) => {
     .then((data) => {
       console.log(data[0]);
       $('#headContainer').hide();
-      createPartsCard(data[0], '#newHeadContainer', '#head');
+      createPartsCard(data[0], '#newHeadContainer', '#head', 'head');
     })
     .catch((error) => {
       console.error(error);
@@ -61,7 +61,7 @@ const chosenTorso = (selectValueTorso) => {
     .then((data) => {
       console.log(data[0]);
       $('#torsoContainer').hide();
-      createPartsCard(data[0], '#newTorsoContainer', '#torso');
+      createPartsCard(data[0], '#newTorsoContainer', '#torso', 'torso');
     })
     .catch((error) => {
       console.error(error);
@@ -101,7 +101,7 @@ const chosenLegs = (selectValueLegs) => {
     .then((data) => {
       console.log(data[0]);
       $('#legsContainer').hide();
-      createPartsCard(data[0], '#newLegsContainer', '#legs');
+      createPartsCard(data[0], '#newLegsContainer', '#legs', 'legs');
     })
     .catch((error) => {
       console.error(error);
