@@ -2,3 +2,53 @@
   display: flex;
   align-content: center;
 }
+
+@mixin dropshadow {
+  text-shadow: 3px 1px 8px white;
+}
+
+@mixin align {
+  position: relative;
+  left: 40%;
+  top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.savedImageForScss {
+  @include align();
+  width: 100px;
+  height: 100px;
+}
+
+.legoName {
+  text-align: center;
+  margin: 6%;
+}
+
+#savedLego {
+  margin: auto;
+  margin-bottom: 3%;
+  display: block;
+}
+ 
+#names {
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 35px;
+}
+
+#heading {
+  @include dropshadow();
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 50px;
+}
+
+#creation {
+  @include dropshadow();
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
