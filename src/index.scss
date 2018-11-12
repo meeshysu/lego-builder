@@ -1,12 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: lightgreen;
+  background-image: url(../images/gears.jpg);
+  background-size: inherit;
+  background-position: center;
 }
 
 #names {
+  font-family: 'Allerta Stencil', sans-serif;
   display: flex; 
   flex-direction: row;
   justify-content: center;
   margin-bottom: 6%;
 }
+

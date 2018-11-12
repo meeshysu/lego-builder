@@ -5,9 +5,9 @@ const savedCharacterString = (character) => {
   let newString = '';
   newString += `<div class="newcard">
   <h5 class="legoName">${character.name}</h5>
-    <img src="${character.headImage}" alt="head">
-    <img src="${character.torsoImage}" alt="torso">
-    <img src="${character.legsImage}" alt="legs">
+    <img class="savedImageForScss" src="${character.headImage}" alt="head">
+    <img class="savedImageForScss" src="${character.torsoImage}" alt="torso">
+    <img class="savedImageForScss" src="${character.legsImage}" alt="legs">
   </div>
   </div>`;
   $('#savedLegoCreation').append(newString);
